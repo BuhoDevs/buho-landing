@@ -13,6 +13,7 @@ interface MotionWrapperProps {
     | "flipY"
     | "staggered";
   delay?: number;
+  id?: string;
 }
 
 const animationVariants = {
@@ -55,6 +56,7 @@ export default function MotionWrapper({
   className,
   animation = "fadeIn",
   delay = 0,
+  id = "motion-wrapper",
 }: MotionWrapperProps) {
   const variant = animationVariants[animation];
   return (
@@ -77,6 +79,7 @@ export default function MotionWrapper({
           : undefined
       }
       className={className}
+      id={id}
     >
       {children}
     </motion.div>

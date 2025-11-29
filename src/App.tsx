@@ -1,22 +1,24 @@
-import "./App.css";
-import Contact from "./components/Contact";
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
+import Projects from "./components/Projects";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
-      <div className="flex flex-col items-center justify-center px-6 py-12 space-y-12">
-        {/* Hero Section */}
+    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/30">
+      <Navbar />
+      <main>
         <Hero />
-
-        {/* Servicios */}
         <Services />
-
-        {/* Contacto */}
+        <Projects />
+        <About />
         <Contact />
-      </div>
-    </>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
